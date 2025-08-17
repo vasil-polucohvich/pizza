@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzashop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div><a href="/" class="logo">pizzashop</a></div>
+        <nav class="desktop-nav">
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About us</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="btn btn-login">Log in</a>
+            <div class="icon cart-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9814 17.5186C12.441 18.059 11.559 18.059 11.0186 17.5186L6.5 13C6.39345 12.8934 6.33333 12.7485 6.33333 12.5968V10.1504C6.33333 9.42978 6.92978 8.83333 7.65042 8.83333H16.3496C17.0702 8.83333 17.6667 9.42978 17.6667 10.1504V12.5968C17.6667 12.7485 17.6066 12.8934 17.5 13L12.9814 17.5186Z" fill="currentColor" />
+                    <path d="M7.66667 11.5H16.3333L15.3627 8.35641C15.1587 7.74953 14.5828 7.33333 13.9213 7.33333H10.0787C9.4172 7.33333 8.84128 7.74953 8.63729 8.35641L7.66667 11.5Z" fill="currentColor" />
+                    <path d="M12 21C14.7614 21 17 18.7614 17 16C17 13.2386 14.7614 11 12 11C9.23858 11 7 13.2386 7 16C7 18.7614 9.23858 21 12 21Z" fill="#2E1C15" />
+                    <circle cx="9.5" cy="18.5" r="1.5" fill="#FF7A3D" />
+                    <circle cx="14.5" cy="18.5" r="1.5" fill="#FF7A3D" /></svg>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+            <svg class="hamburger" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </div>
+    </header>
+    <nav class="mobile-nav">
+        <div class="close-menu">
+            <svg class="close-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#">Log in</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    The Fastest Pizza
+                    <span class="delivery-text">
+                        Delivery
+                        <svg class="lightning-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 3L13 11L18 11L11 21L11 13L6 13L13 3Z" fill="#FF7A3D" /></svg>
+                    </span>
+                </h1>
+                <p class="hero-description">
+                    We will deliver juicy pizza for your family in 30 minutes, if the courier is late - pizza is free!
+                </p>
+                <div class="video-preview">
+                    <p class="video-text">Cooking process:</p>
+                    <div class="video-thumbnail">
+                        <img src="./images/youtube2.webp" class="play-icon" alt="youtube">
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">To order</a>
+                    <a href="#" class="btn btn-secondary">Pizza-Menu</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="pizza-image"></div>
+                <div class="garnish garnish-slice"></div>
+                <div class="garnish garnish-fries"></div>
+            </div>
+        </section>
+        <section id="menu" class="menu-section section fade-in">
+            <h2 class="section-title">Menu</h2>
+            <div class="menu-grid">
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">Margarita Pizza</h3>
+                    <p class="card-description">Classic pizza with mozzarella</p>
+                    <div class="card-footer">
+                        <span class="price">$12.00</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">Pepperoni Pizza</h3>
+                    <p class="card-description">A favorite with a rich layer of pepperoni.</p>
+                    <div class="card-footer">
+                        <span class="price">$14.50</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">BBQ Chicken Pizza</h3>
+                    <p class="card-description">Juicy chicken, tangy BBQ sauce, and onions.</p>
+                    <div class="card-footer">
+                        <span class="price">$15.00</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">Hawaiian Pizza</h3>
+                    <p class="card-description">Sweet pineapple, ham, and mozzarella.</p>
+                    <div class="card-footer">
+                        <span class="price">$13.75</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="popular-section section fade-in">
+            <h2 class="popular-title">MOST POPULAR PIZZA</h2>
+        </section>
+        <section class="menu-section section fade-in">
+            <div class="menu-grid">
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">Veggie Pizza</h3>
+                    <p class="card-description">Fresh vegetables and a light sauce.</p>
+                    <div class="card-footer">
+                        <span class="price">$12.50</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">Meat Lovers</h3>
+                    <p class="card-description">Pepperoni, sausage, ham, and bacon.</p>
+                    <div class="card-footer">
+                        <span class="price">$16.25</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">Supreme Pizza</h3>
+                    <p class="card-description">Everything you love on a single pizza.</p>
+                    <div class="card-footer">
+                        <span class="price">$17.00</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+                <div class="pizza-card">
+                    <div class="card-image-box"></div>
+                    <h3 class="card-title">Cheesy Garlic Bread</h3>
+                    <p class="card-description">A perfect side dish with cheesy flavor.</p>
+                    <div class="card-footer">
+                        <span class="price">$8.50</span>
+                        <a href="#" class="btn btn-card">Order now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="events" class="events-section section fade-in">
+            <h2 class="section-title">Events</h2>
+            <div class="events-grid">
+                <div class="event-item event-main event-1"></div>
+                <div class="event-item event-2"></div>
+                <div class="event-item event-3"></div>
+                <div class="event-item event-4"></div>
+                <div class="event-item event-5"></div>
+            </div>
+        </section>
+        <section id="about" class="about-section section fade-in">
+            <h2 class="section-title">About us</h2>
+            <div class="about-content">
+                <div class="about-text-box">
+                    <p>
+                        We are passionate about creating the perfect pizza. Our journey started with a simple idea: to deliver happiness, one slice at a time. We use only the freshest ingredients and a traditional family recipe that has been perfected over generations.
+                    </p>
+                    <p>
+                        Our mission is to bring people together through the love of great food. Every pizzas is crafted with care and a commitment to quality. We believe that good food is the best way to make memories.
+                    </p>
+                </div>
+                <div class="about-image-box">
+                    <div class="pizza-image"></div>
+                    <div class="garnish garnish-fries"></div>
+                    <div class="garnish garnish-slice"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="/" class="logo">pizzashop</a>
+        </div>
+        <div class="footer-contact">
+            <p>+38 (098) 333–55–33</p>
+        </div>
+        <div class="footer-section home">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="#">To Order</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Menu</a></li>
+            </ul>
+        </div>
+        <div class="footer-section events">
+            <h2>Events</h2>
+            <ul>
+                <li><a href="#">3 Pizza 1 Free Coffee</a></li>
+                <li><a href="#">2 Pizza for 1 Price</a></li>
+                <li><a href="#">Kitchen Tour</a></li>
+            </ul>
+        </div>
+        <div class="footer-section menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Show All</a></li>
+                <li><a href="#">Seaproducts</a></li>
+                <li><a href="#">Vegan</a></li>
+                <li><a href="#">Meat</a></li>
+            </ul>
+        </div>
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <ul>
+                <li><a href="#">Our History</a></li>
+                <li><a href="#">Why We?</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3.84 10.95 10.95 0 0 1-9-4.59 4.48 4.48 0 0 0 1.05 5.66A4.45 4.45 0 0 1 2 13.38a4.48 4.48 0 0 0 3.86 4.36 4.5 4.5 0 0 1-2.07.08A4.48 4.48 0 0 0 8 19.82a9.9 9.9 0 0 1-6.93 2.53A14.6 14.6 0 0 0 17 5a9.96 9.96 0 0 0 6 2.53c0-.13 0-.25 0-.38a9.8 9.8 0 0 0 2.55-2.67z"></path>
+                </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

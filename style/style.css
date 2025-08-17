@@ -1,0 +1,895 @@
+:root {
+    --color-dark: #2E1C15;
+    --color-orange-primary: #FF7A3D;
+    --color-orange-secondary: #FF9B67;
+    --color-gray: #D9D9D9;
+    --color-white: #FFFFFF;
+    --font-family-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    font-family: var(--font-family-primary);
+    line-height: 1.5;
+}
+
+.section {
+    padding: 3rem 5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ------------------- Header ------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-orange-primary);
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.nav-list a {
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--color-orange-primary);
+}
+
+.header-actions {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-login {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.btn-login:hover {
+    background-color: var(--color-gray);
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-white);
+}
+
+.icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    z-index: 20;
+}
+
+.hamburger {
+    color: var(--color-orange-primary);
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 15;
+}
+
+.mobile-nav.active {
+    transform: translateX(0);
+}
+
+.close-menu {
+    position: absolute;
+    top: 2rem;
+    right: 5%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.close-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--color-orange-primary);
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* ------------------- Hero ------------------- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-title .delivery-text {
+    display: flex;
+    align-items: center;
+    color: var(--color-orange-primary);
+    font-weight: 600;
+    gap: 0.5rem;
+}
+
+.lightning-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-orange-primary);
+}
+
+.hero-description {
+    color: var(--color-gray);
+    font-size: 1rem;
+    max-width: 400px;
+    word-break: break-word;
+}
+
+.video-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.video-text {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+.video-thumbnail {
+    width: 15rem;
+    height: 8rem;
+    background-color: #3f2a20;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*.play-icon {
+    width: 3rem;
+    height: 3rem;
+}*/
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.btn-primary {
+    background-color: var(--color-orange-primary);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-orange-secondary);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    padding: 1rem 2rem;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-image-container {
+    /*background-color: var(--color-orange-primary);*/
+    position: relative;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    height: 500px;
+}
+
+.pizza-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    max-width: 445px;
+    background: url('../images/pizza.webp') no-repeat center center / cover;
+    z-index: 2;
+    border-radius: 3rem;
+}
+
+.garnish {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+.garnish-slice {
+    width: 120px;
+    height: 120px;
+    top: -7%;
+    right: -1%;
+    background: url('../images/pizza1.webp') no-repeat center center / contain;
+    transform: rotate(3deg);
+}
+
+
+
+.card-image-box{
+    background: url(../images/pitstsa-na-belom.webp);
+    background-repeat: no-repeat;
+
+}
+
+.garnish-fries {
+    width: 150px;
+    height: 150px;
+    bottom: -5%;
+    left: -5%;
+    background: url('../images/fries.webp') no-repeat center center / contain;
+}
+
+/* ------------------- Common Section Styles ------------------- */
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-orange-primary);
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------- Menu Section ------------------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.pizza-card {
+    background-color: #3f2a20;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    word-break: break-word;
+}
+
+.pizza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-image-box {
+    width: 100%;
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    flex-grow: 1;
+    
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-orange-primary);
+}
+
+.btn-card {
+    background-color: var(--color-orange-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-card:hover {
+    background-color: var(--color-orange-secondary);
+}
+/* ... попередні стилі ... */
+
+/* ------------------- Hero ------------------- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    word-break: break-word;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-title .delivery-text {
+    display: flex;
+    align-items: center;
+    color: var(--color-orange-primary);
+    font-weight: 600;
+    gap: 0.5rem;
+    /* Анімація блискавки */
+    animation: gzap 2s ease-in-out infinite;
+}
+
+.lightning-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-orange-primary);
+}
+
+@keyframes gzap {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    52% { transform: scale(1); opacity: 1; }
+    54% { transform: scale(1.1); opacity: 0.8; }
+    56% { transform: scale(1); opacity: 1; }
+}
+
+/* ... решта стилів без змін ... */
+
+/* ------------------- Popular Section ------------------- */
+.popular-section {
+    background: url('../images/populerpizza.webp') no-repeat center center / cover;
+    padding: 5rem 5%;
+    text-align: center;
+    position: relative;
+    border-radius: 3rem;
+}
+
+.popular-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
+}
+
+.popular-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    position: relative;
+    z-index: 2;
+}
+
+/* ------------------- Events Section ------------------- */
+.events-section .section-title {
+    text-align: left;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.event-item {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-1{
+    background: url(../images/pizzaeats.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:4rem;
+
+}
+.event-2{
+    background: url(../images/pizza-tort2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:4rem;
+}
+.event-3{
+    background: url(../images/pizza-tort3.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:4rem;
+}
+.event-4{
+    background: url(../images/pizza-tort4.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:4rem;
+}
+.event-5{
+    background: url(../images/pizza-tort.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:4rem;
+}
+
+.event-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.event-main {
+    height: 300px;
+}
+
+/* ------------------- About Section ------------------- */
+.about-section .section-title {
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-text-box {
+    max-width: 600px;
+}
+
+.about-text-box p {
+    color: var(--color-gray);
+    margin-bottom: 1rem;
+}
+
+.pizza-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pizza-mini {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-image-box {
+    position: relative;
+    background-color: var(--color-orange-primary);
+    border-radius: 2rem;
+    min-height: 400px;
+}
+
+/*.about-image-box .pizza-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background: url('./images/wooden-pizza.png') no-repeat center bottom / contain;
+    z-index: 2;
+}*/
+.about-image-box .garnish-slice {
+    width: 120px;
+    height: 120px;
+    top: -7%;
+    right: -1%;
+    background: url(../images/pizza1.webp) no-repeat center center / contain;
+    transform: rotate(3deg);
+
+}
+.about-image-box .garnish-fries {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    left: 5%;
+    background: url('../images/pizza1.webp') no-repeat center bottom / contain;
+}
+
+.about-image-box .garnish-slice {
+    width: 120px;
+    height: 120px;
+    top: 5%;
+    right: 5%;
+    background: url('../images/pizza1.webp') no-repeat center center / contain;
+    transform: rotate(20deg);
+    z-index: 3;
+}
+
+/* ------------------- Footer ------------------- */
+
+ .footer {
+            background-color: #1a1005;
+            color: #d1b897;
+            padding: 40px 5%;
+            border-top: 1px solid #ff7b00;
+            display: grid;
+            grid-template-areas:
+                "logo home events menu about"
+                "contact . . . social";
+            grid-template-columns: 1fr repeat(4, minmax(100px, 1fr));
+            gap: 20px;
+        }
+
+        .footer-logo {
+            grid-area: logo;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-logo h1 {
+            color: #ff7b00;
+            font-size: 24px;
+            margin: 0;
+            text-transform: lowercase;
+            padding-right: 40px;
+            border-right: 1px solid #ff7b00;
+        }
+
+        .footer-contact {
+            grid-area: contact;
+            margin-top: 40px;
+        }
+
+        .footer-section {
+            padding: 0;
+        }
+
+        .footer-section.home { grid-area: home; }
+        .footer-section.events { grid-area: events; }
+        .footer-section.menu { grid-area: menu; }
+        .footer-section.about { grid-area: about; }
+        .social-icons {
+            grid-area: social;
+            justify-self: end;
+            align-self: end; /* Нова властивість для вирівнювання іконок */
+            display: flex;
+            gap: 15px; /* Використання gap замість margin */
+        }
+
+        .footer-section h2 {
+            color: #d1b897;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #d1b897;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ff7b00;
+        }
+
+        .social-icons a {
+            color: #d1b897;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff7b00;
+        }
+
+        @media (max-width: 1024px) {
+            .footer {
+                grid-template-areas:
+                    "logo logo logo"
+                    "home events menu"
+                    "about social social"
+                    "contact contact contact";
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-items: center;
+                text-align: center;
+            }
+
+            .footer-logo {
+                align-items: center;
+            }
+
+            .footer-logo h1 {
+                border-right: none;
+                padding-right: 0;
+            }
+
+            .footer-contact {
+                margin-top: 20px;
+            }
+
+            .social-icons {
+                justify-self: center;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                grid-template-areas:
+                    "logo"
+                    "home"
+                    "events"
+                    "menu"
+                    "about"
+                    "social"
+                    "contact";
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .footer-logo h1 {
+                 border-right: none;
+                 padding-right: 0;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+/* ------------------- Desktop Styles (Media Queries) ------------------- */
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 2rem 8%;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+
+    .header-actions {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        padding: 0 8% 4rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-description {
+        font-size: 1.125rem;
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .hero-buttons {
+        margin-top: 3rem;
+    }
+    
+    
+
+    .hero-image-container {
+        flex: 1;
+        margin-top: 0;
+        min-height: 650px;
+    }
+
+    .section {
+        padding: 5rem 8%;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .popular-section {
+        padding: 8rem 8%;
+    }
+
+    .popular-title {
+        font-size: 3.5rem;
+    }
+
+    .events-section .section-title {
+        text-align: center;
+    }
+
+    .events-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+    }
+    
+    .event-main {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        height: auto;
+    }
+
+    .about-content {
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+    
+    .about-text-box {
+        flex: 1;
+    }
+
+    .about-image-box {
+        flex: 1;
+        min-height: 500px;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem 8%;
+    }
+}
