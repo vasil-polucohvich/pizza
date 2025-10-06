@@ -404,8 +404,8 @@ ul {
 .btn-card {
     background-color: var(--color-orange-primary);
     color: var(--color-white);
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.4rem;
+    font-size: 0.8rem;
 }
 
 .btn-card:hover {
