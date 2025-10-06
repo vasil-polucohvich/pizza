@@ -893,4 +893,12 @@ ul {
         justify-content: space-between;
         padding: 3rem 8%;
     }
+     .footer {
+        grid-template-areas:
+        "logo home events menu about"
+        "contact contact . social social";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        text-align: center;
+            }
 }
